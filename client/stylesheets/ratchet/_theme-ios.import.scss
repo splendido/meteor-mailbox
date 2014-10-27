@@ -13,20 +13,20 @@
 // Colors
 //
 // Main theme colors
-$primary-color:  #007aff;
-$chrome-color:   rgba(247,247,247,.98);
+$primary-color:  #007aff !default;
+$chrome-color:   rgba(247,247,247,.98) !default;
 
 // Action colors
-$default-color:  #929292;
-$positive-color: #4cd964;
-$negative-color: #dd524d;
+$default-color:  #929292 !default;
+$positive-color: #4cd964 !default;
+$negative-color: #dd524d !default;
 
 // Bars
-$bar-base-height: 44px;
-$bar-tab-height:  50px;
+$bar-base-height: 44px !default;
+$bar-tab-height:  50px !default;
 
 // iOS style transitions
-$timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+$timing-fuction: cubic-bezier(.1, .5, .1, 1) !default; // Inspired by @c2prods
 
 
 // Base
