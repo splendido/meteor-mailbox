@@ -1,0 +1,33 @@
+<template name="messagesShow">
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Message</h1>
+  {{/contentFor}}
+
+  {{#contentFor "navButtonLeft"}}
+    <a href="{{pathFor 'messages.index'}}" data-nav-direction="left" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span> Inbox</a>
+  {{/contentFor}}
+
+  <div class="content">
+    <div class="card message-show-card">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          <p>From: <strong>{{message.from.name}}</strong></p>
+          <p>To: <strong>Nick Wientge</strong></p>
+        </li>
+        <li class="table-view-cell">
+          <strong>{{message.subject}}</strong>
+        </li>
+        <li class="table-view-cell">
+          <p>{{message.body}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {{#contentFor "barFooter"}}
+    <button type="button" class="btn btn-link btn-nav pull-left"><span class="icon icon-compose"></span></button>
+    <button type="button" class="btn btn-link btn-nav pull-right"><span class="icon icon-trash"></span></button>
+  {{/contentFor}}
+
+</template>

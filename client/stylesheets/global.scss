@@ -1,0 +1,113 @@
+// Custom
+@import './_mixins.import.scss';
+@import './_variables.import.scss';
+
+// Ratchet
+@import "./ratchet/ratchet.import.scss";
+@import "./ratchet/_theme-ios.import.scss";
+
+html,
+body {
+  min-height: 1000px;
+  background: -moz-linear-gradient(top,  rgba(86,61,124,0) 0%, rgba(86,61,124,0) 25%, rgba(86,61,124,0.5) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(86,61,124,0)), color-stop(25%,rgba(86,61,124,0)), color-stop(100%,rgba(86,61,124,0.5))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(86,61,124,0) 0%,rgba(86,61,124,0) 25%,rgba(86,61,124,0.5) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(86,61,124,0) 0%,rgba(86,61,124,0) 25%,rgba(86,61,124,0.5) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(86,61,124,0) 0%,rgba(86,61,124,0) 25%,rgba(86,61,124,0.5) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(86,61,124,0) 0%,rgba(86,61,124,0) 25%,rgba(86,61,124,0.5) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00563d7c', endColorstr='#80563d7c',GradientType=0 ); /* IE6-9 */
+}
+body {
+  position: relative !important; // Overrides the fixed positioning of body in Ratchet
+  font: 400 14px/1.5 "Open Sans", sans-serif;
+  color: #333;
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased; // Fix for webkit rendering
+}
+
+// Page Styles:
+.device {
+  display: none;
+  font-size: $font-size-default;
+  font-family: $font-family-default;
+  line-height: $line-height-default;
+}
+@media screen and (min-width: 768px) {
+  .device {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    display: block;
+    width: 395px;
+    height: 813px;
+    margin-left: -198px;
+    font-family: "Helvetica Neue", sans-serif;
+    background-image: url("/images/device.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include transition(background-image .1s linear);
+
+    &.device-fixed {
+      position: fixed;
+      right: auto;
+    }
+  }
+  .device .device-content {
+    position: absolute;
+    top: 121px;
+    left: 35px;
+    width: 324px;
+    height: 577px;
+    overflow: hidden;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
+    background-color: #fff;
+  }
+  .device .content,
+  .device .bar,
+  .device .modal {
+    position: absolute;
+  }
+  .device .content {
+    // top: 44px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+// App Styles
+.updated-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.new-message-textarea {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 70px;
+  resize: none;
+  background-color: #fff !important;
+  height: 320px;
+}
+
+.card > p {
+  padding: 10px;
+}
+
+.message-show-card .table-view-cell {
+  padding-right: 15px;
+}
