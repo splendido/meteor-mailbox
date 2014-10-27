@@ -3,6 +3,10 @@ Router.configure({
 });
 
 Router.route('/', {
+  name: 'splash'
+});
+
+Router.route('/messages', {
   name: 'messages.index'
 });
 

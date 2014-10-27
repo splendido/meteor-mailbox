@@ -1,3 +1,13 @@
+SplashController = RouteController.extend({
+  layoutTemplate: 'splashLayout',
+  action: function() {
+    this.render('splash');
+    Meteor.setTimeout(function() {
+      Router.go('messages.index');
+    }, 2000);
+  }
+});
+
 MessagesIndexController = RouteController.extend({
   data: function() {
     return {
