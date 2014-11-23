@@ -1,3 +1,5 @@
+var navDirection = 'right';
+
 Template.appLayout.rendered = function() {
   this.find('#slide-container')._uihooks = {
     insertElement: function(node, next) {
