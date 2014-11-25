@@ -3,7 +3,7 @@ SplashController = RouteController.extend({
   action: function() {
     this.render('splash');
     Meteor.setTimeout(function() {
-      Router.go('atSignIn');
+      Router.go('messages.index');
     }, 2000);
   }
 });
