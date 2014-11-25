@@ -7,13 +7,12 @@ meteor-platform
 autopublish
 insecure
 fourseven:scss
-iron:router@1.0.0-pre5
 anti:fake
 mrt:underscore-string-latest
-useraccounts:ratchet
 accounts-password
 accounts-google
-accounts-facebook
 service-configuration
 linto:fontawesome
+useraccounts:ratchet
+iron:router
 

@@ -8,6 +8,10 @@
     <a href="{{pathFor 'messages.index'}}" data-nav-direction="left" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span> Inbox</a>
   {{/contentFor}}
 
+  {{#contentFor "navButtonRight"}}
+    {{> atNavButton}}
+  {{/contentFor}}
+
   <div class="content">
     <div class="card message-show-card">
       <ul class="table-view">
